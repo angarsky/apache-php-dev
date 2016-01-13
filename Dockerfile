@@ -6,6 +6,8 @@ MAINTAINER Tommy Lau <tommy@gen-new.com>
 ENV XDEBUG_VERSION 2.2.7
 ENV XDEBUG_MD5 71a6b75885207e79762e1e7aaf5c3993
 
+RUN apt-get update && apt-get install -y php5-mysql
+
 # Install Xdebug
 RUN set -x \
 	&& curl -SL "http://www.xdebug.org/files/xdebug-$XDEBUG_VERSION.tgz" -o xdebug.tgz \
