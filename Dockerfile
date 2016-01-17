@@ -14,3 +14,5 @@ ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
 EXPOSE 22
+
+CMD apache2-foreground && /usr/sbin/sshd -D
