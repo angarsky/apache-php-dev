@@ -22,7 +22,7 @@ RUN apt-get -y install supervisor && \
   mkdir -p /etc/supervisor/conf.d
 
 # supervisor configuration
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisor.conf /etc/supervisor/conf.d/supervisord.conf
 
 # run supervisor
 CMD ["/usr/bin/supervisord"]
