@@ -21,8 +21,8 @@ RUN apt-get -y install supervisor && \
   mkdir -p /var/log/supervisor && \
   mkdir -p /etc/supervisor/conf.d
 
-# supervisor base configuration
-ADD supervisor.conf /etc/supervisor.conf
+# supervisor configuration
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# default command
-CMD ["supervisord", "-c", "/etc/supervisor.conf"]
+# run supervisor
+CMD ["/usr/bin/supervisord"]
